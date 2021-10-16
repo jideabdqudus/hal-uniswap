@@ -1,6 +1,51 @@
 @import "_config";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  font-family: "Manrope", sans-serif;
-  background-color: $landingpage_color;
-} 
+body{
+  background-color: $bg_color;
+  font-family: "Inter", sans-serif
+}
+
+
+.Header{
+  .logo {
+   position: relative;
+    float: left !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin: auto auto auto 20px !important;
+    min-height: 100% !important;
+    min-width: 0% !important;
+  }
+  .bg-header{
+    background-color: $navbar_color;
+  }
+  .bg-indigo-600{
+    background: $btn_color !important;
+  }
+}
+
+.Content{
+  margin-top: 30px;
+  h2{
+    color: $text_color;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .pool-info{
+    margin: 15px 0 15px 0;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    background-color:$navbar_color;
+    span{
+      color: $text_color;
+      font-size: 17px;
+      font-weight: 500;  
+      margin: 0 15px;    
+    }
+  }
+}
