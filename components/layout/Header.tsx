@@ -2,10 +2,6 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import Image from "next/image"
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export function Header() {
   return (
     <div className='Header'>
@@ -59,18 +55,22 @@ export function Header() {
               </a>
             </Popover.Group>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <div>
-                Ethereum
+              <div className='eth'>
+                <a href="#" className="text-base px-0 py-2 font-medium text-white-500 hover:text-gray-900">
+                  Ethereum
+                </a>
               </div>
             </div>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-                Sign in
-              </a>
+              <input type="text" placeholder='Search pools or tokens'  />
             </div>
-            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            <div className="hidden md:flex items-center justify-end">
               <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-                Sign in
+                <div className="box-size">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                </svg>
+                </div>
               </a>
             </div>
           </div>
