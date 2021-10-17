@@ -9,6 +9,28 @@ function classNames(...classes) {
 export function Header() {
   return (
     <div className='Header'>
+      <Fragment>
+        <Popover>
+            <div className='top-header'>
+            <div className="grid grid-cols-5 gap-4">
+              <div className='synced-block'>
+                  <h3>Latest synced block: 
+                    <span>13451712</span>
+                    <div className='circle'></div>
+                  </h3>
+              </div>
+              <h4>
+                ETH Price: <b>$3.82k</b>
+              </h4>
+              <div className='col-end-7'>
+                <h4>V2 Analytics</h4>
+                <h4>Docs</h4>
+                <h4>App</h4>
+              </div>
+            </div>
+            </div>
+          </Popover>
+      </Fragment>
       <Popover className="relative bg-header">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
@@ -23,11 +45,12 @@ export function Header() {
                 />
               </a>
             </div>
-            <Popover.Group as="nav" className="hidden md:flex space-x-10 items end">
+            <Popover.Group as="nav" className="hidden md:flex space-x-7 items end" style={{marginLeft:"0"}}>
               <a href="#" className="text-base px-0 py-2 font-medium text-gray-500 hover:text-gray-900">
                 Overview
               </a>
-              <a href="#" className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+              <a href="#" className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-3 py-1 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+              style={{borderRadius:"16px"}}
               >
                 Pools
               </a>
@@ -35,6 +58,16 @@ export function Header() {
                 Tokens
               </a>
             </Popover.Group>
+            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+              <div>
+                Ethereum
+              </div>
+            </div>
+            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+              <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                Sign in
+              </a>
+            </div>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
                 Sign in

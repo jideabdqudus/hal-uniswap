@@ -10,6 +10,51 @@ body{
 
 
 .Header{
+  .top-header{
+    background-color: black;
+    padding: 8px 8px 8px 20px;
+    color: rgb(195, 197, 203);
+    h4{
+      margin: 0px;
+      margin-left: 10px;
+      min-width: 0px;
+      font-weight: 500;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: left;
+    }
+    .synced-block{
+      border-radius: 4px;
+      background-color: #2C2F36;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      h3{
+        font-weight: 500;
+        font-size: 11px;
+        color: rgb(108, 114, 132);
+        margin-left: 10px;
+      }
+      span{
+      opacity: .6;
+        color: rgb(39, 174, 96);
+      }
+      .circle {
+        width: 8px;
+        height: 8px;
+        min-height: 8px;
+        min-width: 8px;
+        margin-left: 0.4rem;
+        margin-top: 3px;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        background-color: rgb(39, 174, 96);
+    }
+    }
+  }
   .logo {
    position: relative;
     float: left !important;
@@ -46,6 +91,29 @@ body{
       font-size: 17px;
       font-weight: 500;  
       margin: 0 15px;    
+    }
+  }
+
+  .pool-table {
+    border-collapse: collapse;
+    width: 100%;
+    td{
+      padding: 8px;
+      border: none;
+      color: $text_color; 
+      background-color: $navbar_color;   
+    }
+    th{
+      padding: 8px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: $navbar_color;
+      color: $text_color;
+    }
+    tr :hover{
+      color: $btn_color;
+      cursor: pointer;
     }
   }
 }
